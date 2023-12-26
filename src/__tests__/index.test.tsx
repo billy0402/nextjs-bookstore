@@ -1,4 +1,4 @@
-import HomePage from '@/pages/index';
+import HomePage from '@/pages/index.page';
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 

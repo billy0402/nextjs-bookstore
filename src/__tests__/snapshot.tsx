@@ -1,4 +1,4 @@
-import HomePage from '@/pages/index';
+import HomePage from '@/pages/index.page';
 import { render } from '@testing-library/react';
 
 it('renders homepage unchanged', () => {
