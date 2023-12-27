@@ -9,7 +9,7 @@ const HomePage: NextPage = () => {
 
   return (
     <>
-      <h1>Hello, world!</h1>
+      <h1>Book Store</h1>
       <LoadingBox isLoading={isLoading}>
         <BookList books={data} />
       </LoadingBox>
