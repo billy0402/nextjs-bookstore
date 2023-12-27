@@ -1,7 +1,16 @@
-import HomePage from '@/pages/index.page';
-import { render } from '@testing-library/react';
+import {
+  render,
+  screen,
+  waitForElementToBeRemoved,
+} from '@testing-library/react';
 
-it('renders homepage unchanged', () => {
-  const { container } = render(<HomePage />);
+import wrapper from '@/__tests__/utils/react-query';
+import HomePage from '@/pages/index.page';
+
+it('renders homepage unchanged', async () => {
+  const { container } = render(<HomePage />, { wrapper });
+
+  await waitForElementToBeRemoved(screen.getByText('LoadingBox'));
+
   expect(container).toMatchSnapshot();
 });
