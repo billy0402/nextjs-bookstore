@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom';
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 
 import db from '@/__tests__/utils/mocks/responses/book';
 import type { Book } from '@/models/book';
@@ -11,9 +11,9 @@ describe('BookList', () => {
     // @ts-ignore
     const books: Book[] = db.book.getAll();
 
-    render(<BookList books={books} />);
+    const { container } = render(<BookList books={books} />);
 
-    const items = screen.getAllByRole('listitem');
+    const items = container.getElementsByClassName('chakra-card');
 
     expect(items.length).toBe(1);
   });

@@ -31,6 +31,7 @@ const db = factory<{
     name: String,
     price: faker.commerce.price,
     introduction: faker.lorem.paragraph,
+    imageUrl: faker.image.url,
     authors: manyOf('author'),
     publisher: oneOf('publisher'),
     classification: oneOf('classification'),
