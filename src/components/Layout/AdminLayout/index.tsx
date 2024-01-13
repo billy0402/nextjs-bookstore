@@ -1,16 +1,18 @@
-import Link from 'next/link';
+import { Container } from '@chakra-ui/react';
+
+import useApiUtils from '@/hooks/api/utils';
 
 type Props = {
   children?: React.ReactNode;
 };
 
 const AdminLayout = ({ children }: Props) => {
+  useApiUtils();
+
   return (
-    <>
-      <h1>AdminLayout</h1>
-      <Link href='/'>Client</Link>
+    <Container as='article' maxWidth='100%' padding='md'>
       {children}
-    </>
+    </Container>
   );
 };
 

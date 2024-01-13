@@ -4,6 +4,7 @@ export type Book = ApiModel & {
   name: string;
   price: number;
   introduction: string;
+  imageUrl: string;
   authors: Author[];
   publisher: Publisher;
   classification: Classification;

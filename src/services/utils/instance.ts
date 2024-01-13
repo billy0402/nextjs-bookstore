@@ -1,10 +1,13 @@
 import axios from 'axios';
+import applyCaseMiddleware from 'axios-case-converter';
 
 import { BASE_API_URL } from '@/fixtures/constants';
 
-const instance = axios.create({
-  baseURL: BASE_API_URL,
-});
+const instance = applyCaseMiddleware(
+  axios.create({
+    baseURL: BASE_API_URL,
+  }),
+);
 
 instance.interceptors.request.use(
   (config) => config,
@@ -12,7 +15,7 @@ instance.interceptors.request.use(
 );
 
 instance.interceptors.response.use(
-  (response) => response,
+  (response) => response.data,
   (error) => Promise.reject(error),
 );
 

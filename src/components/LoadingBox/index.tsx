@@ -1,3 +1,5 @@
+import { Flex, Spinner } from '@chakra-ui/react';
+
 type Props = {
   isLoading: boolean;
   children: React.ReactNode;
@@ -5,7 +7,11 @@ type Props = {
 
 const LoadingBox = ({ isLoading, children }: Props) => {
   if (isLoading) {
-    return <div>LoadingBox</div>;
+    return (
+      <Flex justifyContent='center' alignItems='center' height='100vh'>
+        <Spinner size='xl' />
+      </Flex>
+    );
   }
 
   return children;
