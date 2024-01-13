@@ -1,5 +1,6 @@
-import type { Book } from '@/models/book';
 import Link from 'next/link';
+
+import type { Book } from '@/models/book';
 
 type Props = {
   books: Book[] | undefined;

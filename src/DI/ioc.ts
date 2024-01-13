@@ -1,6 +1,7 @@
 import { asFunction } from 'awilix';
 
 import HomePageViewModel from '@/pages/ViewModel';
+
 import createTypedContainer from './create-typed-container';
 
 const registrations = {

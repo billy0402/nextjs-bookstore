@@ -3,13 +3,13 @@
  * {@link https://github.com/jeffijoe/awilix/issues/122#issuecomment-467356329}
  */
 
-import {
+import type {
   AwilixContainer,
   ContainerOptions,
   ResolveOptions,
   Resolver,
-  createContainer,
 } from 'awilix';
+import { createContainer } from 'awilix';
 
 /**
  * Container definition base.

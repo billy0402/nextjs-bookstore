@@ -1,6 +1,8 @@
-import { setLayoutType } from '@/redux/reducers/layout';
-import { useRouter } from 'next/router';
 import { useEffect } from 'react';
+
+import { useRouter } from 'next/router';
+
+import { setLayoutType } from '@/redux/reducers/layout';
 
 import { LayoutType } from '@/enums/layout-type';
 import { toLayoutType } from '@/helpers/router';
