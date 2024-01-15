@@ -1,4 +1,21 @@
-# nextjs-template
+# nextjs-bookstore
+
+[![GH Pages Deploy](https://github.com/billy0402/nextjs-bookstore/workflows/Deploy%20Next.js%20site%20to%20Pages/badge.svg)](https://github.com/billy0402/nextjs-bookstore/actions/workflows/deploy.yml 'GitHub Actions workflow status')
+[![GitHub tag](https://img.shields.io/github/tag/billy0402/nextjs-bookstore)](https://github.com/billy0402/nextjs-bookstore/releases/?include_prereleases&sort=semver 'View GitHub releases')
+[![License](https://img.shields.io/badge/License-MIT-blue)](?tab=MIT-1-ov-file 'Go to license section')
+
+[![Made with Node](https://img.shields.io/badge/dynamic/json?label=node&query=%24.engines%5B%22node%22%5D&url=https://raw.githubusercontent.com/billy0402/nextjs-bookstore/main/package.json)](https://nodejs.org 'Go to Node.js homepage')
+[![Package - Typescript](https://img.shields.io/github/package-json/dependency-version/billy0402/nextjs-bookstore/dev/typescript/main?logo=typescript&logoColor=white)](https://www.typescriptlang.org 'Go to TypeScript homepage')
+[![Package - React](https://img.shields.io/github/package-json/dependency-version/billy0402/nextjs-bookstore/react/main?logo=react&logoColor=white)](https://react.dev 'Go to React homepage')
+[![Package - Nextjs](https://img.shields.io/github/package-json/dependency-version/billy0402/nextjs-bookstore/next/main?logo=nextdotjs&logoColor=white)](https://nextjs.org 'Go to Nextjs homepage')
+
+<div align="center">
+
+[![Use this template](https://img.shields.io/badge/Generate-Use_this_template-2ea44f?style=for-the-badge)](https://github.com/billy0402/nextjs-template)
+
+[![View site - GH Pages](https://img.shields.io/badge/View_site-GH_Pages-2ea44f?style=for-the-badge)](https://billy0402.github.io/nextjs-bookstore/)
+
+</div>
 
 ## environment
 
@@ -56,3 +73,7 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## License
+
+Released under [MIT](/LICENSE) by [@billy0402](https://github.com/billy0402).

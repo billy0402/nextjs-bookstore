@@ -1,7 +1,24 @@
 {
-  "name": "nextjs-template",
+  "name": "nextjs-bookstore",
+  "description": "a bookstore website",
   "version": "0.1.0",
   "private": true,
+  "keywords": [
+    "javascript",
+    "typescript",
+    "reactjs",
+    "nextjs"
+  ],
+  "author": "Billy Huang",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/billy0402/nextjs-bookstore.git"
+  },
+  "homepage": "https://github.com/billy0402/nextjs-bookstore#readme",
+  "bugs": {
+    "url": "https://github.com/billy0402/nextjs-bookstore/issues"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -12,6 +29,7 @@
     "lint-staged": "lint-staged",
     "test": "jest",
     "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -61,6 +79,9 @@
     "sass": "1.69.5",
     "typescript": "5.3.3",
     "undici": "5.28.2"
+  },
+  "engines": {
+    "node": "20.10.0"
   },
   "overrides": {
     "msw": {
