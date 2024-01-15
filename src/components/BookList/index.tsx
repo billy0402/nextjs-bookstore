@@ -18,10 +18,14 @@ type Props = {
 
 const BookList = ({ books }: Props) => {
   return (
-    <SimpleGrid columns={3} spacing={10}>
+    <SimpleGrid data-testid='book-list' columns={3} spacing={10}>
       {books?.length ? (
         books?.map((book) => (
-          <Link key={book.id} href={`/books/${book.id}`}>
+          <Link
+            key={book.id}
+            data-testid='book-item'
+            href={`/books/${book.id}`}
+          >
             <Card as='article' height='100%'>
               <CardBody as='section'>
                 <Stack as='article' spacing='3'>

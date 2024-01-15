@@ -9,7 +9,11 @@ import { enterEvent } from '@/helpers/evnet';
 import useHomePageViewModel from './useHomePageViewModel';
 
 const HomePage: NextPage = () => {
-  const { data, isLoading, nameRef, search } = useHomePageViewModel();
+  const { data, error, isLoading, nameRef, search } = useHomePageViewModel();
+
+  if (error) {
+    return <div>{error.message}</div>;
+  }
 
   return (
     <>

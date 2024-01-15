@@ -11,7 +11,10 @@ const useHomePageViewModel = () => {
 
   const nameRef = useRef<HTMLInputElement>(null);
 
-  const { data, isLoading } = useQueryList<Book[]>('books', router.query);
+  const { data, error, isLoading } = useQueryList<Book[]>(
+    'books',
+    router.query,
+  );
 
   const search = () => {
     router.push({
@@ -22,6 +25,7 @@ const useHomePageViewModel = () => {
 
   return {
     data,
+    error,
     isLoading,
     nameRef,
     search,
