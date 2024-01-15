@@ -1,5 +1,5 @@
 export type ApiModel = {
-  id: number;
+  id: string;
   createdAt: Date;
   updatedAt: Date;
 };

@@ -8,10 +8,11 @@ const useBookDetailPageViewModel = () => {
 
   const { id } = router.query as { id: string };
 
-  const { data, isLoading } = useQueryDetail<Book>('books', id);
+  const { data, error, isLoading } = useQueryDetail<Book>('books', id);
 
   return {
     data,
+    error,
     isLoading,
   };
 };

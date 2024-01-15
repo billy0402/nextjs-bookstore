@@ -4,15 +4,15 @@ type Props = {
   children: React.ReactNode;
 };
 
-const queryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      retry: false,
-    },
-  },
-});
-
 const wrapper = ({ children }: Props) => {
+  const queryClient = new QueryClient({
+    defaultOptions: {
+      queries: {
+        retry: false,
+      },
+    },
+  });
+
   return (
     <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
   );

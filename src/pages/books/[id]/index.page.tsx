@@ -19,7 +19,11 @@ import LoadingBox from '@/components/LoadingBox';
 import useBookDetailPageViewModel from './useBookDetailPageViewModel';
 
 const BookDetailPage: NextPage = () => {
-  const { data: book, isLoading } = useBookDetailPageViewModel();
+  const { data: book, error, isLoading } = useBookDetailPageViewModel();
+
+  if (error) {
+    return <div>{error.message}</div>;
+  }
 
   return (
     <LoadingBox isLoading={isLoading}>

@@ -15,6 +15,6 @@ describe('BookList', () => {
 
     const items = container.getElementsByClassName('chakra-card');
 
-    expect(items.length).toBe(1);
+    expect(items.length).toBe(books.length);
   });
 });

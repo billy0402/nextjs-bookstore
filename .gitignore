@@ -9,6 +9,7 @@
 # testing
 /coverage
 src/__tests__/__snapshots__/
+public/images/ngnl
 
 # next.js
 /.next/

@@ -9,7 +9,7 @@ const LoadingBox = ({ isLoading, children }: Props) => {
   if (isLoading) {
     return (
       <Flex justifyContent='center' alignItems='center' height='100vh'>
-        <Spinner size='xl' />
+        <Spinner data-testid='loading-box' size='xl' />
       </Flex>
     );
   }
