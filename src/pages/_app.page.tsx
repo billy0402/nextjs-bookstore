@@ -6,13 +6,14 @@ import { QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools/production';
 import { Provider } from 'react-redux';
 
+import { initMocks } from '@/__tests__/utils/mocks';
 import Layout from '@/components/Layout';
 import { theme } from '@/fixtures/theme';
 import { queryClient } from '@/helpers/query-client';
 import wrapper from '@/redux/store';
 import '@/styles/globals.scss';
 
-// initMocks();
+initMocks();
 
 const App = ({ Component, ...pageProps }: AppProps) => {
   const { store, props } = wrapper.useWrappedStore(pageProps);
