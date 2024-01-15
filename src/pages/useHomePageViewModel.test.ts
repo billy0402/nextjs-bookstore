@@ -38,7 +38,7 @@ describe('useHomePageViewModel', () => {
     // Arrange
     const { result } = viewModel;
     // @ts-ignore
-    const books: Book = db.book.getAll();
+    const books: Book[] = db.book.getAll();
 
     await waitFor(() => expect(result.current.isLoading).not.toBe(true));
 
@@ -61,6 +61,24 @@ describe('useHomePageViewModel', () => {
     expect((result.current.error as AxiosError)?.response?.status).toEqual(
       HttpStatusCode.InternalServerError,
     );
+    expect(result.current.isLoading).toEqual(false);
+  });
+
+  it('should get filtered list when book name can be found', async () => {
+    // Arrange
+    // @ts-ignore
+    const books: Book[] = db.book.getAll();
+    const book = books[0];
+    mockRouter.mockReturnValue({
+      route: '/',
+      query: { name: book.name },
+    });
+    const { result } = viewModel;
+
+    await waitFor(() => expect(result.current.isLoading).not.toBe(true));
+
+    // Assert
+    expect(JSON.stringify(result.current.data)).toEqual(JSON.stringify([book]));
     expect(result.current.isLoading).toEqual(false);
   });
 

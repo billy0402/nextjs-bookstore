@@ -11,6 +11,10 @@ function apiUrl(path: string) {
 
 export const handlers: HttpHandler[] = [
   ...db.book.toHandlers('rest', BASE_API_URL),
+  ...db.author.toHandlers('rest', BASE_API_URL),
+  ...db.publisher.toHandlers('rest', BASE_API_URL),
+  ...db.classification.toHandlers('rest', BASE_API_URL),
+  ...db.tag.toHandlers('rest', BASE_API_URL),
   // http.get(apiUrl('/books'), () => {
   //   return HttpResponse.json();
   // }),
