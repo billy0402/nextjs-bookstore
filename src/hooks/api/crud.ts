@@ -24,7 +24,7 @@ export type MutationOptions<TRequest = unknown, TResponse = TRequest> = Omit<
   'queryKey' | 'mutationFn'
 >;
 
-const crudQueryKeys = {
+export const crudQueryKeys = {
   list: (module: string, query: { [key: string]: any } = {}) =>
     [module, 'list', query] as const,
   detail: (module: string, id: string) => [module, 'detail', id] as const,

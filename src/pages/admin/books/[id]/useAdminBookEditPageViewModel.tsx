@@ -1,8 +1,10 @@
 import { useRouter } from 'next/router';
 
+import { ApiModule } from '@/enums/api-module';
 import { bookFormLayoutConfig } from '@/fixtures/form-layout-configs/book';
 import { queryClient } from '@/helpers/query-client';
 import {
+  crudQueryKeys,
   useQueryCreate,
   useQueryDetail,
   useQueryUpdate,
@@ -17,22 +19,28 @@ const useAdminBookEditPageViewModel = () => {
 
   const { id } = router.query as { id: string };
 
-  const bookDetail = useQueryDetail<Book>('books', id, {
+  const bookDetail = useQueryDetail<Book>(ApiModule.books, id, {
     enabled: id !== 'create',
   });
 
   const { authorList, publisherList, classificationList, tagList } =
     useApiUtils();
 
-  const createMutation = useQueryCreate<Book>('books', {
+  const createMutation = useQueryCreate<Book>(ApiModule.books, {
     onSuccess: (data, variables) => {
-      queryClient.setQueryData(['books', variables.id], data);
+      queryClient.setQueryData(
+        crudQueryKeys.detail(ApiModule.books, variables.id),
+        data,
+      );
       // router.push('/admin/books');
     },
   });
-  const editMutation = useQueryUpdate<Book>('books', id, {
+  const editMutation = useQueryUpdate<Book>(ApiModule.books, id, {
     onSuccess: (data, variables) => {
-      queryClient.setQueryData(['books', variables.id], data);
+      queryClient.setQueryData(
+        crudQueryKeys.detail(ApiModule.books, variables.id),
+        data,
+      );
       // router.push('/admin/books');
     },
   });

@@ -1,8 +1,9 @@
 import { useQuery } from '@tanstack/react-query';
 
+import { ApiModule } from '@/enums/api-module';
 import { apiBookDetail, apiBookList } from '@/services/book';
 
-const moduleName = 'books';
+const moduleName = ApiModule.books;
 const bookQueryKeys = {
   list: (query: { [key: string]: any } = {}) =>
     [moduleName, 'list', query] as const,
