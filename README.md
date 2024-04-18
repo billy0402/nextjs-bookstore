@@ -1,5 +1,7 @@
 # nextjs-bookstore
 
+A bookstore website practice using Next.js.
+
 [![GH Pages Deploy](https://github.com/billy0402/nextjs-bookstore/workflows/Deploy%20Next.js%20site%20to%20Pages/badge.svg)](https://github.com/billy0402/nextjs-bookstore/actions/workflows/deploy.yml 'GitHub Actions workflow status')
 [![GitHub tag](https://img.shields.io/github/tag/billy0402/nextjs-bookstore)](https://github.com/billy0402/nextjs-bookstore/releases/?include_prereleases&sort=semver 'View GitHub releases')
 [![License](https://img.shields.io/badge/License-MIT-blue)](?tab=MIT-1-ov-file 'Go to license section')
@@ -16,6 +18,15 @@
 [![View site - GH Pages](https://img.shields.io/badge/View_site-GH_Pages-2ea44f?style=for-the-badge)](https://billy0402.github.io/nextjs-bookstore/)
 
 </div>
+
+**Website**
+![Book List Page](/docs/images/web.png)
+
+**Website Administrator**
+![Administrator Book List Page](/docs/images/admin.png)
+
+**Test Coverage**
+![Test Coverage](/docs/images/test.png)
 
 ## environment
 
