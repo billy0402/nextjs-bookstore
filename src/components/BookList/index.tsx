@@ -34,10 +34,7 @@ const BookList = ({ books }: Props) => {
                     style={{ height: '200px' }}
                   >
                     <Image
-                      src={
-                        book.imageUrl ??
-                        '/images/ngnl/Light_Novel_Volume_1_Cover.jpeg'
-                      }
+                      src={book.imageUrl ?? '/images/ngnl/Unknown.jpg'}
                       alt={book.name}
                       fill
                     />

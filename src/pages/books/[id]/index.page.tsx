@@ -37,10 +37,7 @@ const BookDetailPage: NextPage = () => {
           <Stack spacing='3'>
             <section className='image-container' style={{ height: '200px' }}>
               <Image
-                src={
-                  book?.imageUrl ??
-                  '/images/ngnl/Light_Novel_Volume_1_Cover.jpeg'
-                }
+                src={book?.imageUrl ?? '/images/ngnl/Unknown.jpg'}
                 alt={book?.name ?? 'book cover'}
                 fill
               />
